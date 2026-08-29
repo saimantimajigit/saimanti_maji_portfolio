@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f8f7ff" />
+  <title>404 — Saimanti Maji</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .error-page{min-height:100svh;display:grid;place-items:center;padding:32px}.error-shell{width:min(960px,100%);display:grid;grid-template-columns:.9fr 1.1fr;gap:24px;align-items:center}.error-copy span{color:var(--primary);font-weight:800;font-size:12px;letter-spacing:.14em;text-transform:uppercase}.error-copy h1{font-family:Manrope,sans-serif;font-size:clamp(70px,13vw,150px);line-height:.8;letter-spacing:-.08em;margin:28px 0 34px}.error-copy h2{font-family:Manrope,sans-serif;font-size:clamp(30px,5vw,52px);line-height:1.04;letter-spacing:-.05em;margin:0}.error-copy p{color:var(--muted);max-width:520px}.error-copy a{display:inline-flex;margin-top:18px;padding:13px 18px;border-radius:14px;color:white;background:linear-gradient(135deg,var(--primary),var(--primary-2));font-weight:700;font-size:12px}.error-visual{position:relative;min-height:430px;border:1px solid var(--line);border-radius:32px;background:linear-gradient(135deg,color-mix(in srgb,var(--primary) 11%,var(--surface)),color-mix(in srgb,var(--primary-2) 8%,var(--surface)));overflow:hidden}.lost-window{position:absolute;width:72%;height:54%;left:14%;top:21%;border-radius:20px;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);padding:22px}.lost-window::before{content:"404";font-family:Manrope;font-size:64px;font-weight:800;color:transparent;-webkit-text-stroke:1px color-mix(in srgb,var(--primary) 55%,transparent);position:absolute;right:20px;bottom:8px}.lost-window b{display:block;color:var(--primary);font-family:monospace;font-size:12px}.lost-window i{display:block;width:68%;height:8px;border-radius:99px;background:var(--line);margin-top:16px}.lost-window i:nth-of-type(2){width:48%}.orbit{position:absolute;width:280px;height:280px;border:1px dashed color-mix(in srgb,var(--primary) 45%,transparent);border-radius:50%;right:-80px;top:-70px}.orbit::after{content:"A";position:absolute;width:44px;height:44px;border-radius:14px;display:grid;place-items:center;color:white;background:#dd0031;left:10px;bottom:38px;font-family:Manrope;font-weight:800}@media(max-width:760px){.error-shell{grid-template-columns:1fr}.error-visual{min-height:300px;order:-1}.error-copy h1{font-size:92px;margin:18px 0 26px}}
+  </style>
+</head>
+<body>
+  <main class="error-page">
+    <section class="error-shell">
+      <div class="error-copy">
+        <span>Routing mismatch</span>
+        <h1>404</h1>
+        <h2>This route never made it into production.</h2>
+        <p>The page may have moved, the URL may be incomplete, or this path simply does not exist.</p>
+        <a href="./">Return to portfolio ↗</a>
+      </div>
+      <div class="error-visual" aria-hidden="true">
+        <div class="orbit"></div>
+        <div class="lost-window"><b>router.navigate('/home')</b><i></i><i></i></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
