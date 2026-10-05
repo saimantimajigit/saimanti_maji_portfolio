@@ -1,37 +1,36 @@
-# Saimanti Maji — Portfolio
+# Saimanti Maji — Cinematic Portfolio
 
-A modern, responsive static portfolio for **Saimanti Maji**, designed around an Angular/front-end engineering identity with backend awareness.
+A cinematic, backend-first full-stack portfolio derived from Saimanti Maji's CV.
+
+## Concept: Flow Control
+
+Instead of presenting a conventional portfolio grid, the site visualises a software workflow: frontend traffic enters a central system core, moves through APIs, queues, workers, cache and databases, then reorganises into project modules. The visual metaphor matches Saimanti's real work across healthcare, warehouse, logistics and retail systems.
 
 ## Stack
 
-- HTML5
-- CSS3
-- Vanilla JavaScript
-- Google Fonts (DM Sans + Manrope)
-- No frontend framework or build step required
+- Next.js + TypeScript
+- React Three Fiber / Three.js
+- Drei
+- Postprocessing (light bloom only)
+- Native DOM sections for content, SEO and accessibility
 
-## Highlights
-
-- Responsive desktop, tablet, and mobile layouts
-- Sticky navigation with mobile full-screen menu
-- Light / dark theme toggle with localStorage persistence
-- Scroll reveal animations with reduced-motion support
-- Angular/API/backend-inspired hero illustration built entirely with HTML/CSS
-- Experience, projects, skills, education, strengths, and contact sections
-- Themed custom 404 page
-- Resume included locally under `assets/Saimanti-Maji-Resume.pdf`
-- SEO meta tags and structured Person schema
-
-## Run locally
-
-You can open `index.html` directly, or serve the folder locally:
+## Run
 
 ```bash
-python -m http.server 8000
+npm install
+npm run dev
 ```
 
-Then visit `http://localhost:8000`.
+Open http://localhost:3000
 
-## GitHub Pages
+## Performance
 
-Push the contents of this folder to the root of a GitHub Pages repository and enable Pages from the repository settings.
+- Adaptive DPR
+- Postprocessing disabled automatically if performance falls
+- Minimal geometry, procedural materials, no large texture downloads
+- DOM remains fully usable even if WebGL is unavailable
+- Reduced-motion support
+
+## Editing content
+
+Edit `src/data/portfolio.ts` for profile, projects and skills.
