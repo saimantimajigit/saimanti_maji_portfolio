@@ -22,7 +22,10 @@ export default function CameraRig(){
     const pos=curve.getPointAt(t); const look=lookCurve.getPointAt(t);
     pos.x+=pointer.x*.08; pos.y+=pointer.y*.05;
     camera.position.lerp(pos,1-Math.exp(-dt*8)); camera.lookAt(look);
-    camera.fov=THREE.MathUtils.damp(camera.fov,THREE.MathUtils.lerp(42,34,Math.sin(t*Math.PI)*.65),4,dt); camera.updateProjectionMatrix();
+    if(camera instanceof THREE.PerspectiveCamera){
+      camera.fov=THREE.MathUtils.damp(camera.fov,THREE.MathUtils.lerp(42,34,Math.sin(t*Math.PI)*.65),4,dt);
+      camera.updateProjectionMatrix();
+    }
   });
   return null;
 }
